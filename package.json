@@ -1,6 +1,7 @@
 {
   "name": "pinia-course",
   "version": "0.0.0",
+  "homepage": "https://github.com/bevuxyna/vue-school-pinia-course",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
