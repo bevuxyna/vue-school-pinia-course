@@ -6,7 +6,7 @@ import { useCartStore } from "@/stores/CartStore";
 import { storeToRefs } from "pinia";
 
 const productStore = useProductStore();
-const { products } = storeToRefs(productStore);
+const { productState } = storeToRefs(productStore);
 productStore.fill();
 
 const cartStore = useCartStore();
@@ -17,7 +17,7 @@ const cartStore = useCartStore();
     <TheHeader />
     <ul class="sm:flex flex-wrap lg:flex-nowrap gap-5">
       <ProductCard
-        v-for="product in products"
+        v-for="product in productState"
         :key="product.name"
         :product="product"
         @add-to-cart="cartStore.addItem($event, product)"
